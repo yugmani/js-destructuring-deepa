@@ -29,3 +29,28 @@ console.log(name); //Yoog
 console.log(street); //Beverly Hills  ?
 console.log(age); //Minor ?
 console.log(phone); //undefined
+
+// Object Destructing in Javascript
+// *********************************************
+
+const user = {
+  firstName: 'Yoog',
+  lastName: 'Gurung',
+  myAge: 23,
+};
+
+//without destructuring
+console.log(`My name is ${user.firstName} ${user.lastName}.`);
+// My name is Yoog Gurung.
+
+//destructuring
+const { firstName, lastName } = user;
+
+console.log(`My name is ${firstName} ${lastName}.`);
+// My name is Yoog Gurung.
+
+//change key
+const { firstName: first, lastName: last, myAge } = user;
+
+console.log(`My name is ${first} ${last} and ${myAge} years old.`);
+// My name is Yoog Gurung.
